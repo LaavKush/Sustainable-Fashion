@@ -1,0 +1,2 @@
+echo "bert_text_model/" >> .gitignore
+echo "*.h5" >> .gitignore
