@@ -39,8 +39,10 @@ A **Streamlit dashboard** allows users to upload fabric images or input fabric m
 ---
 
 ## 💡 Motivation
-The global fashion industry contributes up to **10% of global carbon emissions**.  
-Materials like *polyester, nylon, and acrylic* have high environmental costs, whereas *organic cotton, linen, hemp, and livaeco* are eco-friendly alternatives.
+
+The fashion industry is one of the world’s largest polluters, with fabric choices like polyester and nylon contributing up to **10% of global carbon emissions** to carbon emissions and waste. Consumers and manufacturers often lack transparent ways to assess how sustainable their materials truly are.
+
+Fabric Sustainability Classifier uses Machine Learning to bridge this gap by analyzing both fabric descriptions (via NLP) and images (via CNN) to predict whether a fabric is sustainable or not. The goal is to make sustainability in fashion more data-driven, explainable, and accessible — empowering consumers, designers, and researchers to make environmentally conscious decisions.
 
 👉 This project aims to:
 - Support **transparent sustainability decisions** for designers and retailers  
@@ -83,7 +85,7 @@ Materials like *polyester, nylon, and acrylic* have high environmental costs, wh
   - Fabric name  
   - Material description  
   - Image URL  
-  - Label → `Sustainable` / `Unsustainable`
+  - Label → `Sustainable` / `Unsustainable` / 'Semi-Sustainable'
 
 | Fabric Name | Material | Label |
 |--------------|-----------|-------|
@@ -94,6 +96,12 @@ Materials like *polyester, nylon, and acrylic* have high environmental costs, wh
 
 ## 🧮 Model Training
 
+### 🔹 Text Classification
+- **Vectorizer:** TF-IDF  
+- **Model:** Logistic Regression, Naive Bayes, SVM, BERT  
+- **Goal:** Detect sustainability from material names
+
+
 ### 🔹 Image Classification
 - **Architecture:** EfficientNetB0 (transfer learning)
 - **Input size:** 224×224×3
@@ -101,11 +109,6 @@ Materials like *polyester, nylon, and acrylic* have high environmental costs, wh
 - **Optimizer:** Adam  
 - **Epochs:** 12 (fine-tuned)  
 - **Explainability:** Grad-CAM visualizations  
-
-### 🔹 Text Classification
-- **Vectorizer:** TF-IDF  
-- **Model:** Logistic Regression / Naive Bayes  
-- **Goal:** Detect sustainability from material names
 
 ---
 
@@ -116,7 +119,7 @@ Materials like *polyester, nylon, and acrylic* have high environmental costs, wh
 | Tab | Description |
 |------|-------------|
 | 🏠 **Predict** | Upload an image or enter fabric name to check sustainability |
-| 📊 **Insights** | View dataset trends (sustainable vs unsustainable) |
+| 📊 **Insights** | View dataset trends (sustainable, unsustainable, semi-sustainable) |
 | ℹ️ **About Project** | Learn about the purpose and tech stack |
 
 ### Example Workflow
