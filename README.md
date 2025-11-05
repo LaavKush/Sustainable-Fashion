@@ -166,8 +166,8 @@ Open the local URL or public URL shown in the terminal
 - TensorFlow Team for transfer learning models
 - Google Sheets API for easy dataset integration
 - Streamlit Community for open-source support
-- Mentors at ADTC & SheFi for guidance in sustainability tech
 
+  
 ## Authors
 - Sania Verma (B.Tech IT)
 - Laavanya Kushwaha (B.Tech IT)
