@@ -1,0 +1,9 @@
+streamlit
+tensorflow
+torch
+transformers
+pandas
+numpy
+plotly
+pillow
+huggingface-hub
