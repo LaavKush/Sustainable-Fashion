@@ -1,5 +1,5 @@
 streamlit
-tensorflow-cpu==2.12.0
+tensorflow-cpu==2.20.0
 torch
 transformers
 pandas
@@ -10,4 +10,5 @@ huggingface-hub
 scikit-learn
 tqdm
 requests
+
 
